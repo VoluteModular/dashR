@@ -14,7 +14,7 @@ The Digital Analog Shift Register is a module that mimics the functionality of a
     </ul> 
   <li>Shift In:
     <ul>
-    <li>This input xpects a 5V trigger pulse to rotate the shift register. It is tolerant of higher voltages.</li>
+    <li>This input expects a 5V trigger pulse to rotate the shift register. It is tolerant of higher voltages.</li>
     </ul>
   </ul>
   <li>5 3.5mm outputs:</li>
@@ -58,6 +58,11 @@ The Digital Analog Shift Register is a module that mimics the functionality of a
       <li>This knob is used to change the position of each shift register outputs. Each shift register can take the position of 0-15 </li>
     </ul>
   </ul>
+  <li>4 Buttons</li>
+  <ul>
+    <li> There are four buttons. Each selects the corresponding shift register output in order to change its position in the 16 stage shift register.</li>
+  </ul>
+    
   <li>4 LEDs:</li>
   <ul>
     <li>These LEDs are used as visual outputs when choosing a scale or setting the position of the shift register. They display the numbers 0 - 15 using binary notation, so going from right to left they represent 1,2,4,8</li>
@@ -65,5 +70,54 @@ The Digital Analog Shift Register is a module that mimics the functionality of a
   </ul>
   </ul>
   </ul>
-
-     
+<h2>Usage</h2>
+<p>
+  Connect a CV source to the CV-In Input Jack. Ideally, this CV source will be 0-5V, but voltages less than 0V will be treated as 0V and voltages over 5V will be treated as 5V.<br><br>
+  
+  Connect a trigger to the Shift Input Jack. This could be a trigger from a clock generator for example.
+  <br><br>
+  By default, the output jacks correspond with the first four stages of the shift register. For example, if there is 1V at the CV In jack and the shift input is triggered, 1V will be present at output jack 0. After another trigger, the 1V will move to output jack 1, then 2, then 3.
+  <br><br>
+  By default, the quantization is set to scale 0 which is the Major scale. In order to change the scale, you must first move the knob to the 0 position (fully counter-clock wise) before it will change. Once you reach the current scale value, you can change to a new one. The scale is indicated by the binary LEDs. So 0111 represents scale 7 with 0 meaning the LED is off and 1 meaning the LED is on. A binary table can be found at the bottom of this page.
+  <br><br>
+  In order to change the position of a shift register output, you first press the button for the shift register output. The current position of the register output will be displayed in binary notation on the LEDs. In order to change it, you must first turn the knob to the position of the current shift regiser output. 0 is totally counter clock wise and 15 is clock wise. Once you hit the current position, you can then change the position. You can exit this editing mode by hitting the same button again or pushing one of the other buttons. Each shift register can be in any position from 0-15. This means one or more shift register can be in the same position, in which case they will always have the same voltage present. It also means they do not need to be in order. For example, shift register output 0 could be in position 7 while shift register output 1 could be in position 5.
+  
+Here is an example of how chords can be created using the shift register:
+  <table>
+    <tr>
+      <td> </td> <td>Trig 1</td><td>Trig 2</td><td>Trig 3</td><td>Trig 4</td><td>Trig 5</td>
+    <tr>
+      <td>Register 0</td><td>C</td><td>G</td><td>E</td><td>A</td><td>D</td> 
+    </tr>
+    <tr>
+      <td>Register 1</td><td> </td><td>C</td><td>G</td><td>E</td><td>A</td>
+    </tr>
+    <tr>
+      <td>Register 2</td><td> </td><td></td><td>C</td><td>G</td><td>E</td>
+    </tr>
+    <tr>
+      <td>Register 3</td><td> </td><td></td><td></td><td>C</td><td>G</td>
+    </tr>
+  </table>
+    <br><br>
+ Binary Numbers 0-15
+ <table>
+      <tr><td>Number</td><td>Bit 3</td><td>Bit 2</td><td>Bit 1</td><td>Bit 0</td></tr>
+         <tr><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+         <tr><td>1</td><td>0</td><td>0</td><td>0</td><td>1</td></tr>
+         <tr><td>2</td><td>0</td><td>0</td><td>1</td><td>0</td></tr>
+         <tr><td>3</td><td>0</td><td>0</td><td>1</td><td>1</td></tr>
+         <tr><td>4</td><td>0</td><td>1</td><td>0</td><td>0</td></tr>
+         <tr><td>5</td><td>0</td><td>1</td><td>0</td><td>1</td></tr>
+         <tr><td>6</td><td>0</td><td>1</td><td>1</td><td>0</td></tr>
+         <tr><td>7</td><td>0</td><td>1</td><td>1</td><td>1</td></tr>
+         <tr><td>8</td><td>1</td><td>0</td><td>0</td><td>0</td></tr>
+         <tr><td>9</td><td>1</td><td>0</td><td>0</td><td>1</td></tr>
+        <tr><td>10</td><td>1</td><td>0</td><td>1</td><td>0</td></tr>
+        <tr><td>11</td><td>1</td><td>0</td><td>1</td><td>1</td></tr>
+        <tr><td>12</td><td>1</td><td>1</td><td>0</td><td>0</td></tr>
+        <tr><td>13</td><td>1</td><td>1</td><td>0</td><td>1</td></tr>
+        <tr><td>14</td><td>1</td><td>1</td><td>1</td><td>0</td></tr>
+        <tr><td>15</td><td>1</td><td>1</td><td>1</td><td>1</td></tr>
+    </table>
+        
