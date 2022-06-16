@@ -99,25 +99,5 @@ Here is an example of how chords can be created using the shift register:
       <td>Register 3</td><td> </td><td></td><td></td><td>C</td><td>G</td>
     </tr>
   </table>
-    <br><br>
- Binary Numbers 0-15
- <table>
-      <tr><td>Number</td><td>Bit 3</td><td>Bit 2</td><td>Bit 1</td><td>Bit 0</td></tr>
-         <tr><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
-         <tr><td>1</td><td>0</td><td>0</td><td>0</td><td>1</td></tr>
-         <tr><td>2</td><td>0</td><td>0</td><td>1</td><td>0</td></tr>
-         <tr><td>3</td><td>0</td><td>0</td><td>1</td><td>1</td></tr>
-         <tr><td>4</td><td>0</td><td>1</td><td>0</td><td>0</td></tr>
-         <tr><td>5</td><td>0</td><td>1</td><td>0</td><td>1</td></tr>
-         <tr><td>6</td><td>0</td><td>1</td><td>1</td><td>0</td></tr>
-         <tr><td>7</td><td>0</td><td>1</td><td>1</td><td>1</td></tr>
-         <tr><td>8</td><td>1</td><td>0</td><td>0</td><td>0</td></tr>
-         <tr><td>9</td><td>1</td><td>0</td><td>0</td><td>1</td></tr>
-        <tr><td>10</td><td>1</td><td>0</td><td>1</td><td>0</td></tr>
-        <tr><td>11</td><td>1</td><td>0</td><td>1</td><td>1</td></tr>
-        <tr><td>12</td><td>1</td><td>1</td><td>0</td><td>0</td></tr>
-        <tr><td>13</td><td>1</td><td>1</td><td>0</td><td>1</td></tr>
-        <tr><td>14</td><td>1</td><td>1</td><td>1</td><td>0</td></tr>
-        <tr><td>15</td><td>1</td><td>1</td><td>1</td><td>1</td></tr>
-    </table>
+
         
